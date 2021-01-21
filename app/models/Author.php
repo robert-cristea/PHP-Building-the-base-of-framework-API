@@ -1,4 +1,5 @@
 <?php
+//Author model
   class Author {
     // database connection and table name
     private $db;

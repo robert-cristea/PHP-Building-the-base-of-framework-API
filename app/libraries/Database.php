@@ -1,4 +1,5 @@
 <?php
+//Database connection Controller
   class Database {
     private $dbUser = DB_USER;
     private $dbPass = DB_PASS;

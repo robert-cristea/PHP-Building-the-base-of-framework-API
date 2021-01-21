@@ -8,7 +8,7 @@ require APPROOT . '/views/includes/navigation.php';
             <div class="container">
                 <div class="col s12 m10">
                     <center><h1>Api list</h1></center>
-                    <div class="card-panel ">
+                    <div class="card-panel">
                         <h4>http://localhost/BenUniWork/api/login</h4>
                         <p><strong>Type: </strong>Post</p>
                         <p><strong>Request Body: </strong></p>
@@ -23,7 +23,7 @@ require APPROOT . '/views/includes/navigation.php';
                         </div>
                     </div>
 
-                    <div class="card-panel ">
+                    <div class="card-panel">
                         <h4>http://localhost/BenUniWork/api/update</h4>
                         <p><strong>Type: </strong>Post</p>
                         <p style="color: red">Role: Admin </p>
@@ -39,7 +39,7 @@ require APPROOT . '/views/includes/navigation.php';
                         </div>
                     </div>
 
-                    <div class="card-panel ">
+                    <div class="card-panel">
                         <h4>http://localhost/BenUniWork/api/delete-session</h4>
                         <p><strong>Type: </strong>Post</p>
                         <p style="color: red">Role: Admin </p>
@@ -54,7 +54,7 @@ require APPROOT . '/views/includes/navigation.php';
                         </div>
                     </div>
 
-                    <div class="card-panel ">
+                    <div class="card-panel">
                         <h4>http://localhost/BenUniWork/api/room-sessions</h4>
                         <p><strong>Type: </strong>Post</p>
                         <p style="color: red">auth: required </p>
@@ -69,7 +69,7 @@ require APPROOT . '/views/includes/navigation.php';
                         </div>
                     </div>
 
-                    <div class="card-panel ">
+                    <div class="card-panel">
                         <h4>http://localhost/BenUniWork/api/total-count</h4>
                         <p><strong>Type: </strong>Get</p>
                         <p style="color: red">auth: required </p>
@@ -84,7 +84,7 @@ require APPROOT . '/views/includes/navigation.php';
                         </div>
                     </div>
 
-                    <div class="card-panel ">
+                    <div class="card-panel">
                         <h4>http://localhost/BenUniWork/api/show-session</h4>
                         <p><strong>Type: </strong>Get</p>
                         <p style="color: red">auth: required </p>
@@ -96,6 +96,21 @@ require APPROOT . '/views/includes/navigation.php';
                         <p><strong>Sample: </strong></p>
                         <div style="margin-left: 50px">
                             <img src="../public/6.png" style="width: 100%"/>
+                        </div>
+                    </div>
+
+                    <div class="card-panel">
+                        <h4>http://localhost/BenUniWork/api/search-item</h4>
+                        <p><strong>Type: </strong>Get</p>
+                        <p style="color: red">auth: required </p>
+                        <p><strong>Request Body: </strong></p>
+                        <p style="margin-left: 50px">keyword (string)</p>
+                        <p><strong>Response: </strong></p>
+                        <p style="margin-left: 50px">message (string)</p>
+                        <p style="margin-left: 50px">searchResult (object)</p>
+                        <p><strong>Sample: </strong></p>
+                        <div style="margin-left: 50px">
+                            <img src="../public/7.png" style="width: 100%"/>
                         </div>
                     </div>
                 </div>

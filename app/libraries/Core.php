@@ -1,6 +1,5 @@
 <?php
-  //Core App Class using AutoLoader
-
+//router Controller
 require "../vendor/autoload.php";
 use Firebase\JWT\JWT;
 require_once '../app/controllers/Api.php';
@@ -179,13 +178,40 @@ require_once '../app/controllers/Api.php';
                 $flag = $this->checkAuth($authorize);
 
                 if($flag > 0) {
-                    if(isset($_GET['sessionId'])) {
+                    if(isset($_GET['sessionname'])) {
                         $data = $sessionClass->showContent($_GET['sessionId']);
                         echo $data;
                     }
                     else {
                         http_response_code(500);
                         echo json_encode(array("message" => "Cannot get sessionId"));
+                    }
+
+                }
+                else{
+                    http_response_code(401);
+                    echo json_encode(array("message" => "Unauthorized"));
+                }
+
+                break;
+
+            case "search-item":
+                $getHeaders = apache_request_headers();
+
+                $authorize = $getHeaders['Authorization'];
+
+                $sessionClass = new Session();
+
+                $flag = $this->checkAuth($authorize);
+
+                if($flag > 0) {
+                    if(isset($_GET['keyword'])) {
+                        $data = $sessionClass->searchContent($_GET['keyword']);
+                        echo $data;
+                    }
+                    else {
+                        $data = $sessionClass->searchContent("");
+                        echo $data;
                     }
 
                 }

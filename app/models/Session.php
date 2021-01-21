@@ -1,5 +1,5 @@
 <?php
-
+//Session Model
   class Session {
     // database connection and table name
     private $db;
@@ -94,6 +94,28 @@
               http_response_code(200);
               return json_encode(array("message" => "Success", "selectedSession" => $result));
 
+
+          } catch (Exception $e)
+          {
+              http_response_code(500);
+              return json_encode(array("message" => $e->getMessage()));
+          }
+      }
+
+      public function searchContent($name){
+
+          try {
+              if($name) {
+                  $this->db->query("SELECT * FROM sessions WHERE name LIKE '%".$name."%'");
+              }
+              else {
+                  $this->db->query("SELECT * FROM sessions");
+              }
+
+              $result = $this->db->resultSet();
+
+              http_response_code(200);
+              return json_encode(array("message" => "Success", "searchResult" => $result));
 
           } catch (Exception $e)
           {

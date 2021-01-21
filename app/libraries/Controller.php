@@ -1,5 +1,5 @@
 <?php
-  //Using Autolader, Load the model and the view
+  //Base Controller
   class Controller {
 
     public function model($model) {

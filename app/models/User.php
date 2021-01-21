@@ -2,7 +2,7 @@
 
 require "../vendor/autoload.php";
 use Firebase\JWT\JWT;
-
+//User Model
   class User {
     // database connection and table name
     private $db;
