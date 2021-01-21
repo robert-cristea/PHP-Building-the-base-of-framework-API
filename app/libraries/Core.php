@@ -11,6 +11,13 @@ require_once '../app/controllers/Api.php';
 
 
     public function __construct() {
+
+        if($_GET['url'] == "api")
+        {
+            header("Location: ".URLROOT."/api/");
+            exit();
+        }
+
       $url = $this->getUrl();
 
       //Look in 'controllers' for first value, ucwords will capitalize first letter
@@ -23,10 +30,9 @@ require_once '../app/controllers/Api.php';
       //Require the controller
       $this->currentController = new $this->currentController;
 
-
     if (!isset($url[1])) {
-        $data['state'] = false;
-        print_r($data);
+        $apiCont = new Api();
+        $apiCont->documentation();
     }
     else {
 
@@ -215,17 +221,19 @@ require_once '../app/controllers/Api.php';
 
                 break;
 
-            case "api":
+            case "list":
                 $apiCont = new Api();
                 $apiCont->documentation();
-
-//                call_user_func_array(["Api", "documentation"], []);
                 break;
 
             case "dashboard":
                 $apiCont = new Api();
                 $apiCont->index();
-//                call_user_func_array(["Api", "index"], []);
+                break;
+
+            default:
+                $apiCont = new Api();
+                $apiCont->documentation();
                 break;
         }
     }
