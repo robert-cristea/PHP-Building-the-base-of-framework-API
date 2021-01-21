@@ -8,13 +8,8 @@ class Api extends Controller {
 
   //dashboard page
   public function index() {
-
-    $view = 'pages/index';
-      if (file_exists('../app/views/' . $view . '.php')) {
-          require_once '../app/views/' . $view . '.php';
-      } else {
-          die("View does not exists.");
-      }
+      
+      $this->view('index');
   }
 
   public function login($userName, $password) {
@@ -28,18 +23,13 @@ class Api extends Controller {
       'title' => 'About Page',
     ];
     
-    $this->view('pages/about', $data);
+    $this->view('about', $data);
   }
 
   //show api list
   public function documentation() {
 
-      $view = 'pages/documentation';
-      if (file_exists('../app/views/' . $view . '.php')) {
-          require_once '../app/views/' . $view . '.php';
-      } else {
-          die("View does not exists.");
-      }
+      $this->view('documentation');
   }
 
 

@@ -9,34 +9,114 @@ require_once '../app/controllers/Api.php';
     protected $currentMethod = 'index';
     protected $params = [];
 
-
     public function __construct() {
 
-        if($_GET['url'] == "api")
-        {
-            header("Location: ".URLROOT."/api/");
-            exit();
+        if(!isset($_GET['url'])) {
+            $apiCont = new Api();
+            $apiCont->index();
+            return true;
         }
 
       $url = $this->getUrl();
 
-      //Look in 'controllers' for first value, ucwords will capitalize first letter
-      if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
-        //Will set a new controller
-        $this->currentController = ucwords($url[0]);
-        unset($url[0]);
-      }
-
-      //Require the controller
-      $this->currentController = new $this->currentController;
-
     if (!isset($url[1])) {
-        $apiCont = new Api();
-        $apiCont->documentation();
+
+        switch($_GET['url']) {
+
+            case 'index.php':
+                $apiCont = new Api();
+                $apiCont->index();
+                return true;
+
+            case 'index':
+                $apiCont = new Api();
+                $apiCont->index();
+                return true;
+
+            case 'documentation/':
+                $apiCont = new Api();
+                $apiCont->documentation();
+                break;
+
+            case 'documentation.php':
+                header("Location: ".URLROOT."/documentation/");
+                exit();
+                break;
+//                $apiCont = new Api();
+//                $apiCont->documentation();
+//                break;
+
+            case 'documentation':
+                header("Location: ".URLROOT."/documentation/");
+                exit();
+                break;
+
+            case 'about':
+                $apiCont = new Api();
+                $apiCont->about();
+                break;
+
+            case 'about.php':
+                $apiCont = new Api();
+                $apiCont->about();
+                break;
+
+            case 'api':
+
+                echo json_encode(array(
+                    "status" => 200,
+                    "message" => "Welcome",
+                    "author" => "Ben",
+                    "api" => array(
+                        "/api"=> "returns api endpoints and basic info",
+                        "/api/login" => array(
+                            "return"=> "a JSON Web Token if the login is successful",
+                            "authentication"=> "username and password from a post form"
+                        ),
+                        "/api/update" => array(
+                            "return" => "updates the title of a session id the JSON Web Token used is correct",
+                            "authentication" => "JSON Web Token and the updated title of the session"
+                        ),
+                        "api/delete-session" => array(
+                            "input" => "sessionId to be deleted from post",
+                            "authentication" => "JSON Web Token and the delete session"
+                        ),
+                        "api/room-sessions" => array(
+                            "input" => "roomId to get roomSession from post",
+                            "return" => "roomSession object",
+                            "authentication" => "JSON Web Token and the roomSession"
+                        ),
+                        "api/total-count" => array(
+                            "return" => "count fo sessions",
+                            "authentication" => "required JSON Web Token"
+                        ),
+                        "api/show-session" => array(
+                            "input" => "sessionId to get session info",
+                            "return"=> "info of selected session",
+                            "authentication" => "required JSON Web Token"
+                        ),
+                        "api/search-item?keyword" => array(
+                            "return"=>"result of search",
+                            "authentication" => "required JSON Web Token"
+                        )
+                    )
+                ));
+                break;
+            default:
+                header("Location: ".URLROOT);
+                exit();
+                break;
+        }
     }
     else {
 
         switch ($url[1]) {
+
+//            case "about":
+//                $pagesClass = new Api();
+//                $pagesClass->about();
+//                break;
+
             case "login":
                 if($_SERVER['REQUEST_METHOD'] == "POST")
                 {
@@ -219,16 +299,6 @@ require_once '../app/controllers/Api.php';
                     echo json_encode(array("message" => "Unauthorized"));
                 }
 
-                break;
-
-            case "list":
-                $apiCont = new Api();
-                $apiCont->documentation();
-                break;
-
-            case "dashboard":
-                $apiCont = new Api();
-                $apiCont->index();
                 break;
 
             default:
