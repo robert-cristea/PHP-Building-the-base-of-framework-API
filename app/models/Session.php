@@ -69,8 +69,17 @@
               $this->db->query("SELECT * FROM sessions WHERE roomId=".$id);
               $result = $this->db->resultSet();
 
-              http_response_code(200);
-              return json_encode(array("message" => "Success", "roomSession" => $result));
+              $num = count($result);
+
+              if ($num > 0){
+                  http_response_code(200);
+                  return json_encode(array("message" => "Success", "roomSession" => $result));
+              }
+              else{
+                  http_response_code(500);
+                  return json_encode(array("message" => "Can't find matching roomID"));
+              }
+
 
           } catch (Exception $e)
           {
@@ -84,9 +93,8 @@
 
               $this->db->query("SELECT COUNT(sessionId) AS totalCount FROM sessions ");
               $result = $this->db->resultSet();
-
               http_response_code(200);
-              return json_encode(array("message" => "Success", "count" => $result));
+              return json_encode(array("message" => "Success", "count" => $result[0]));
 
 
           } catch (Exception $e)

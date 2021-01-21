@@ -267,7 +267,8 @@ require_once '../app/controllers/Api.php';
                     }
 
                     if($flag > 0) {
-                        $sessionClass->totalContentCount();
+                        $data = $sessionClass->totalContentCount();
+                        echo $data;
                     }
                     else{
                         http_response_code(401);
@@ -296,7 +297,7 @@ require_once '../app/controllers/Api.php';
                     }
 
                     if($flag > 0) {
-                        if(isset($_GET['sessionname'])) {
+                        if(isset($_GET['sessionId'])) {
                             $data = $sessionClass->showContent($_GET['sessionId']);
                             echo $data;
                         }
