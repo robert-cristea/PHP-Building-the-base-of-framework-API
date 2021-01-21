@@ -10,6 +10,7 @@
     private $error;
     private static $obj;
 
+    //singleton pattern implementation
     private function __construct() {
       $conn = 'sqlite:' . $this->dbName;
       $options = array(
