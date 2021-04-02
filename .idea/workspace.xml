@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27dbc978-a6c5-42b2-9c18-0c47d09eb053" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/db/chi2018db.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/chi2018db.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libraries/Core.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libraries/Core.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Session.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update/app.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/update/require.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +21,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/libraries/Core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="317" lean-forward="true" selection-start-line="317" selection-end-line="317" />
+            <state relative-caret-position="7025">
+              <caret line="281" selection-start-line="281" selection-end-line="281" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -29,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="80" column="15" lean-forward="true" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+            <state relative-caret-position="2000">
+              <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -61,9 +92,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="18" />
-    <option name="y" value="43" />
-    <option name="width" value="1061" />
+    <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
   <component name="ProjectView">
@@ -71,38 +100,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BenUniWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BenUniWork" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BenUniWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BenUniWork" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BenUniWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BenUniWork" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BenUniWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BenUniWork" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="E:/Xampp/htdocs/2021-2-4-counttimer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -129,18 +133,22 @@
       <option name="presentableId" value="Default" />
       <updated>1611248915577</updated>
       <workItem from="1611248921441" duration="408000" />
-      <workItem from="1611251147843" duration="1937000" />
+      <workItem from="1611251147843" duration="2544000" />
+      <workItem from="1611256417866" duration="36000" />
+      <workItem from="1611277619841" duration="3821000" />
+      <workItem from="1611295971336" duration="55000" />
+      <workItem from="1612289164306" duration="5000" />
+      <workItem from="1612423567206" duration="269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2345000" />
+    <option name="totallyTimeSpent" value="7138000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="43" width="1061" height="1032" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="960" height="1032" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.5339367" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32918552" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -165,17 +173,38 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/Session.php">
+    <entry file="file://$PROJECT_DIR$/app/libraries/Core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="80" column="15" lean-forward="true" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+        <state relative-caret-position="7025">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/libraries/Core.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="317" lean-forward="true" selection-start-line="317" selection-end-line="317" />
+        <state relative-caret-position="50">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="80" column="15" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
         </state>
       </provider>
     </entry>

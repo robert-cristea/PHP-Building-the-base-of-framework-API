@@ -1,11 +1,13 @@
 <?php
-  $ini = parse_ini_file(str_replace('\config', '\app.ini', dirname(__FILE__)));
-
   //APPROOT
   define('APPROOT', dirname(dirname(__FILE__)));
+  echo APPROOT;
+
+  $ini = parse_ini_file(APPROOT."/app.ini");
+  
 
   //URLROOT (Dynamic Links)
-  define('URLROOT', 'http://localhost/BenUniWork');
+  define('URLROOT', 'http://localhost/kf6012');
 
   //Sitename
   define('SITENAME', 'MyUniCourseWork');
